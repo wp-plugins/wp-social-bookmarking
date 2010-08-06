@@ -1,10 +1,10 @@
 === WP Social Bookmarking ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wp-social-bookmarking/
-Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo
+Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share
 Requires at least: 2.5
 Tested up to: 3.0.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites. 
  
@@ -16,7 +16,8 @@ Post your articles to the social bookmarking sites and get traffic.
 == Installation ==
 
 1. Upload the folder wp-social-bookmarking to the /wp-content/plugins/ directory
-1. Activate the plugin WP Social Bookmarking through the 'Plugins' menu in WordPress
+2. Activate the plugin WP Social Bookmarking through the 'Plugins' menu in WordPress
+3. Go to Settings > Social Bookmarking and Change Icon Size.
 
 == Screenshots ==
 
@@ -31,4 +32,8 @@ Please see <a href="http://www.onlinerel.com/wp-social-bookmarking/">FAQ</a>.
  = 1.0 =
  First stable version.
 
+ = 1.1 =
+Next stable version.
+Added: Plugin suport sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>. This helps to promote your blog and get more traffic.
+Feature to change Icon Size has been added.
 
