@@ -38,5 +38,3 @@ Feature to change Icon Size has been added.
  = 1.2 =
  Next stable version.
  Added: Plugin suport sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>. This helps to promote your blog and get more traffic.
- 
- 
