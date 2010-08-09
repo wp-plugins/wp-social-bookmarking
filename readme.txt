@@ -4,7 +4,7 @@ Donate link: http://www.onlinerel.com/wp-social-bookmarking/
 Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share
 Requires at least: 2.5
 Tested up to: 3.0.1
-Stable tag: 1.2
+Stable tag: 1.3
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites. 
  
@@ -30,11 +30,16 @@ Please see <a href="http://www.onlinerel.com/wp-social-bookmarking/">FAQ</a>.
 == Changelog ==
 
  = 1.0 =
- First stable version.
+First stable version.
 
  = 1.1 =
 Feature to change Icon Size has been added.
 
  = 1.2 =
- Next stable version.
+ Added: style.css 
+ 
+ = 1.2 =
+  Next stable version.
  Added: Plugin suport sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>. This helps to promote your blog and get more traffic.
+   
+   
