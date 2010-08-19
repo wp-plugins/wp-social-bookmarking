@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 1.4
+Version: 1.5
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel 
 Author: A. Kilius
