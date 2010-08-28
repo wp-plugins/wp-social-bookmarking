@@ -63,4 +63,3 @@ Please see <a href="http://www.onlinerel.com/wp-social-bookmarking/">FAQ</a>.
   = 1.7 =
 
  -Added: WP Social Bookmarking Demo blog
-
