@@ -1,21 +1,21 @@
 === WP Social Bookmarking ===
 Contributors: allis741 
-Donate link: http://www.onlinerel.com/wp-social-bookmarking/
-Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share
+Donate link: http://www.onlinerel.com/wordpress-plugins/
+Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss, popular
 Requires at least: 2.5
 Tested up to: 3.0.1
-Stable tag: 2.1
+Stable tag: 2.3
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites. 
  
 == Description ==
 
-This plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.  While the plugin is activated a  buttons will appear after the content of the post. Clicking this  button will bring the user to the  bookmarking site.  If the user isn't logged in they will be prompted to do so.  
-Post your articles to the social bookmarking sites and get traffic.  Plugin suport sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>. 
+This plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel, EasyFreeAds.  After plugin is activated a buttons will appear after the content of the post.Clicking this  button will bring the user to the  bookmarking site.  If the user isn't logged in they will be prompted to do so.  
+Post your articles to the social bookmarking sites and get traffic.  Plugin suport sharing your posts feed on <a href="http://www.easyfreeads.com/"> EasyFreeAds</a>. 
 
 <b>Try the Demo</b>
 
-If you're interested in seeing what a default installation of WP Social Bookmarking has to offer, try out the <a target="_blank" href="http://www.easyfreeads.com/">WP Social Bookmarking Demo</a>
+If you're interested in seeing what a default installation of WP Social Bookmarking has to offer, try out the <a target="_blank" href="http://www.onlinerel.com/">WP Social Bookmarking Demo</a>
 
 
 == Installation ==
@@ -30,9 +30,13 @@ If you're interested in seeing what a default installation of WP Social Bookmark
 
 == Frequently Asked Questions ==
 
-Please see <a href="http://www.onlinerel.com/wp-social-bookmarking/">FAQ</a>.
+Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
 == Changelog ==
+
+ = 2.3 =
+
+* Added: Plugin support sharing your posts feed on <a href="http://www.easyfreeads.com/"> EasyFreeAds</a>. 
 
  = 2.1 =
 
