@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 2.3
+Version: 2.4
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel, EasyFreeAds
 Author: A. Kilius
@@ -31,9 +31,8 @@ $images = $pldir.'images/';
     $post_title = get_the_title($post->ID);
     $img_var =  get_option('wp_social_ico');   //"30px";
 
-	if ( is_single ) {  
+	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
 		$content .= '<!-- Begin WP-Social-Bookmarking -->' . "\n";
-
 		$content .= '<div class="WP-Social-Bookmarking"> ' . "\n"  
 	 		. '<a href="http://www.easyfreeads.com/sfeed/?f='.$post_l.'&l='.$lang.'" target="_blank" title="EasyFreeAds Blog News"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="EasyFreeAds Blog News" title="EasyFreeAds Blog News" /></a>' . "\n"
 				. '<a href="http://facebook.com/sharer.php?u=' . $post_link . '&amp;t=' . $post_title . '" target="_blank" rel="nofollow" title="Facebook"><img src="' . $images . 'facebook.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Facebook" title="Facebook" /></a>' . "\n"
@@ -78,7 +77,6 @@ function wp_social_options() {
 	?>
 	<div class="wrap">
 		<h2>WP Social Bookmarking  Settings </h2>
-
 		<form method="post" action="#">
 	 			<table class="form-table">
 				 
@@ -114,7 +112,7 @@ Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
  <h2>Funny photos</h2>
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
-< <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-photos/">Funny photos</h3></a> 
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-photos/">Funny photos</h3></a> 
  <hr />
    		<h2>Joke of the Day</h2>
 <p><b>Plugin "Joke of the Day" displays categorized jokes on your blog. There are over 40,000 jokes in 40 categories. Jokes are saved on our database, so you don't need to have space for all that information. </b> </p>
@@ -140,14 +138,16 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 add_action('wp_head', 'SetStyle');
 add_filter('the_content', 'WP_Social_Bookmarking', 40);
 //  ----- Image RSS
-add_action('rss_item', 'wp_rss_include');
-add_action('rss2_item', 'wp_rss_include');
-
-function wp_rss_include (){
+	$plugin_var= "blog-promotion";
+  if (!in_array( $plugin_var.'/'.$plugin_var.'.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+add_action('rss_item', 'wp_social_rss_include');
+add_action('rss2_item', 'wp_social_rss_include');
+  }
+function wp_social_rss_include (){
 $image_size = get_option('rss_image_size_op');
-if (isset($image_size)) $image_url = rss_image_url($image_size);
+if (isset($image_size)) $image_url = wp_social_rss_image_url($image_size);
 
-else  $image_url = rss_image_url('medium');
+else  $image_url = wp_social_rss_image_url('medium');
 
 if ($image_url != '') :
 
@@ -160,7 +160,7 @@ echo "<enclosure url='".$image_url."' length ='".$filesize."'  type='image/jpg' 
 endif;
 }
 
-function rss_image_url($default_size = 'medium') {	
+function wp_social_rss_image_url($default_size = 'medium') {	
 global $post;
 	$attachments = get_children( array('post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'numberposts' => 1) );
 	if($attachments == true) :
