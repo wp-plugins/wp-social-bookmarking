@@ -3,8 +3,8 @@ Contributors: allis741
 Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.0.1
-Stable tag: 2.4
+Tested up to: 3.0.3
+Stable tag: trunk
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites. 
  
@@ -33,6 +33,10 @@ If you're interested in seeing what a default installation of WP Social Bookmark
 Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
 == Changelog ==
+
+ = 2.5 =
+
+Changed works upto 3.0.3 WP 
 
  = 2.4 =
 

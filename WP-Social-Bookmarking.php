@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 2.4
+Version: 2.5
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
-Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel, EasyFreeAds
+Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -13,7 +13,6 @@ add_action('admin_menu', 'wp_social_menu');
 function wp_social_activate() {
 	update_option('wp_social_ico', '24px');	
 }
-
 function wp_social_menu() {
 	add_options_page('WP Social Bookmarking', 'Social Bookmarking', 8, __FILE__, 'wp_social_options');
 }
@@ -95,15 +94,22 @@ function wp_social_options() {
 		</form>
 <hr />
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
-<p><b>Plugin suport sharing your posts feed on <a href="http://www.easyfreeads.com/">EasyFreeAds</a>. This helps to promote your blog and get more traffic.</b></p>
+<p><b>Plugin suport sharing your posts feed on <a href="http://www.megawn.com/">EasyFreeAds</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
 	<li><a href="http://www.onlinerel.com/">OnlineRel</a></li>
 	<li><a href="http://www.easyfreeads.com/">Easy Free Ads</a></li>
 	<li><a href="http://www.worldestatesite.com/">World Estate Site</a></li>
+	<li><a href="http://jobs.onlinerel.com/">Jobs OnlineRel</a></li>
+	<li><a href="http://www.megawn.com/">Mega World News</a></li>
 </ul>
 </p>
 <hr /><hr />
+ <h2>Blog Promotion</h2>
+<p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
+Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
+ <hr />
  <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
