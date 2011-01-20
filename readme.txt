@@ -6,7 +6,7 @@ Requires at least: 2.5
 Tested up to: 3.1
 Stable tag: trunk
 
-WP Social Bookmarking plugin syndicates your blog posts in social networking sites. 
+WP Social Bookmarking plugin syndicates your blog posts in social networking sites.                                                                                  
  
 == Description ==
 
@@ -33,6 +33,10 @@ If you're interested in seeing what a default installation of WP Social Bookmark
 Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
 == Changelog ==
+
+ = 2.7 =
+
+* Update tags
 
  = 2.6 =
 
