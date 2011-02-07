@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 2.8.2
+Version: 2.8.3
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
-Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com
+Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com, MegaWN.com
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -18,7 +18,7 @@ function wp_social_menu() {
 	add_options_page('WP Social Bookmarking', 'Social Bookmarking', 8, __FILE__, 'wp_social_options');
 }
 
-
+                                                                                 
 function WP_Social_Bookmarking($content) {
 
     global $post;
@@ -129,7 +129,8 @@ Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
    <hr />
  <h2>Real Estate Finder</h2>
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
-Real estate search for U.S., Canada, UK, Australia</b> </p>
+Real estate search for U.S., Canada, UK, Australia</b>
+                                                                             </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
  <hr />
 

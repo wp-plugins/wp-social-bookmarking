@@ -34,6 +34,10 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
 == Changelog ==
 
+ = 2.8.3 =
+
+Updated   links                                                                                                                           
+
  = 2.8.2 =
 
 Updated twitter link
