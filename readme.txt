@@ -36,7 +36,11 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
  = 2.7 =
 
-* Update tags
+Updated twitter link
+
+ = 2.7 =
+
+ Update tags
 
  = 2.6 =
 

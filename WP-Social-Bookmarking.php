@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 2.7
+Version: 2.8
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com
 Author: A. Kilius
@@ -26,8 +26,10 @@ function WP_Social_Bookmarking($content) {
 	$pldir = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)); 
 $images = $pldir.'images/';
 	$post_link = get_permalink($post->ID);	
+	$post_link = get_permalink($post->ID);	
     $lang = get_bloginfo('language'); 
 	$post_l =  base64_encode( $post_link );
+	$post_tweet = site_url().'/?p='.$post->ID;
     $post_title = get_the_title($post->ID);
     $img_var =  get_option('wp_social_ico');   //"30px";
 
@@ -36,7 +38,7 @@ $images = $pldir.'images/';
 		$content .= '<div class="WP-Social-Bookmarking"> ' . "\n"  
 	 		. '<a href="http://www.easyfreeads.com/sfeed/?f='.$post_l.'&l='.$lang.'" target="_blank" title="EasyFreeAds Blog News"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="EasyFreeAds Blog News" title="EasyFreeAds Blog News" /></a>' . "\n"
 				. '<a href="http://facebook.com/sharer.php?u=' . $post_link . '&amp;t=' . $post_title . '" target="_blank" rel="nofollow" title="Facebook"><img src="' . $images . 'facebook.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Facebook" title="Facebook" /></a>' . "\n"
-				 . '<a href="http://twitter.com/home?status=' . $post_link . '  ' . $post_title . '" target="_blank" rel="nofollow" title="Twitter"><img src="' . $images . 'twitter.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Twitter" title="Twitter" /></a>' . "\n"
+				 . '<a href="http://twitter.com/home?status=' . $post_tweet . '  ' . $post_title . '" target="_blank" rel="nofollow" title="Twitter"><img src="' . $images . 'twitter.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Twitter" title="Twitter" /></a>' . "\n"
 		         . '<a href="http://www.myspace.com/Modules/PostTo/Pages/?c=' . $post_link . '&t=' . $post_title . '" target="_blank" rel="nofollow" title="Myspace"><img src="' . $images . 'myspace.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Myspace" title="Myspace" /></a>' . "\n"				 
 			 . '<a href="http://friendfeed.com/share?url=' . $post_link . '&title=' . $post_title . '" target="_blank" rel="nofollow" title="Friendfeed"><img src="' . $images . 'friendfeed.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Friendfeed" title="Friendfeed" /></a>' . "\n"
 	 . '<a href="http://www.technorati.com/faves?add=' . $post_link . '" target="_blank" rel="nofollow" title="Technorati"><img src="' . $images . 'technorati.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Technorati" title="Technorati" /></a>' . "\n"
