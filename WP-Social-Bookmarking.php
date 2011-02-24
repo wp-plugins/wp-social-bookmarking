@@ -1,16 +1,15 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 2.8.3
+Version: 2.8.4
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com, MegaWN.com
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
-
 register_activation_hook( __FILE__, 'wp_social_activate' );
 add_action('admin_menu', 'wp_social_menu');
-                                                                                                 
+
 function wp_social_activate() {
 	update_option('wp_social_ico', '24px');	
 }
@@ -18,11 +17,8 @@ function wp_social_menu() {
 	add_options_page('WP Social Bookmarking', 'Social Bookmarking', 8, __FILE__, 'wp_social_options');
 }
 
-                                                                                 
 function WP_Social_Bookmarking($content) {
-
     global $post;
-	//$images = plugins_url().'/wp-social-bookmarking/images/';
 	$pldir = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)); 
 $images = $pldir.'images/';
 	$post_link = get_permalink($post->ID);	
@@ -55,8 +51,7 @@ $images = $pldir.'images/';
 function SetStyle() {
 	echo '<link rel="stylesheet" type="text/css" media="all" href="'.plugins_url().'/wp-social-bookmarking/style.css">';
 }
-
-	add_filter("plugin_action_links", 'WP_Social_Bookmarking_ActionLink', 10, 2);
+add_filter("plugin_action_links", 'WP_Social_Bookmarking_ActionLink', 10, 2);
 
 function WP_Social_Bookmarking_ActionLink( $links, $file ) {
 	    static $this_plugin;		
@@ -68,8 +63,7 @@ function WP_Social_Bookmarking_ActionLink( $links, $file ) {
 		return $links;
 	}
 
-function wp_social_options() {
-	
+function wp_social_options() {	
 	if(isset($_POST['b_update'])) {
 		if(!empty($_POST['wp_social_ico'])) {
 			update_option('wp_social_ico', $_POST['wp_social_ico']);
@@ -81,8 +75,7 @@ function wp_social_options() {
 		<h2>WP Social Bookmarking  Settings </h2>
 		<form method="post" action="#">
 	 			<table class="form-table">
-				 
-				<th scope="row"> Change Icon Size </th>
+	 <th scope="row"> Change Icon Size </th>
 					<td>
 						<select name="wp_social_ico">
 							<option value="30px" <?php echo get_option('wp_social_ico') == '30px'?'selected':'';?>>30x30px (Big)</option>
@@ -100,12 +93,14 @@ function wp_social_options() {
 <p><b>Plugin suport sharing your posts feed on <a href="http://www.megawn.com/">EasyFreeAds</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
-	<li><a href="http://www.onlinerel.com/">OnlineRel</a></li>
+	<li><a href="http://www.onlinerel.com/">Online Rel</a></li>
 	<li><a href="http://www.easyfreeads.com/">Easy Free Ads</a></li>
 	<li><a href="http://www.worldestatesite.com/">World Estate Site</a></li>
-	<li><a href="http://jobs.onlinerel.com/">Jobs OnlineRel</a></li>
+	<li><a href="http://www.GreatJobCenter.com/">Great Job Center</a></li>
+	<li><a href="http://www.homeshopworld.com/">Home Shop World</a></li>
+	<li><a href="http://www.springfail.com/">Spring Fail</a></li>
 	<li><a href="http://www.megawn.com/">Mega World News</a></li>
-</ul>
+	</ul>
 </p>
 <hr /><hr />
  <h2>Blog Promotion</h2>
@@ -129,11 +124,9 @@ Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
    <hr />
  <h2>Real Estate Finder</h2>
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
-Real estate search for U.S., Canada, UK, Australia</b>
-                                                                             </p>
+Real estate search for U.S., Canada, UK, Australia</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
  <hr />
-
  <h2>Jobs Finder</h2>
 <p><b>Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia</b> </p>

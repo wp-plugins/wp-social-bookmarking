@@ -17,7 +17,6 @@ Post your articles to the social bookmarking sites and get traffic.  Plugin supo
 
 If you're interested in seeing what a default installation of WP Social Bookmarking has to offer, try out the <a target="_blank" href="http://www.onlinerel.com/">WP Social Bookmarking Demo</a>
 
-
 == Installation ==
 
 1. Upload the folder wp-social-bookmarking to the /wp-content/plugins/ directory
@@ -34,6 +33,10 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
 == Changelog ==
 
+ = 2.8.4 =
+
+Tested up to 3.1 WP 
+
  = 2.8.3 =
 
 Updated   links                                                                                                                           
@@ -48,7 +51,7 @@ Updated twitter link
 
  = 2.6 =
 
-Tested upto 3.1 WP 
+Tested up to 3.04 WP 
 
  = 2.5 =
 
