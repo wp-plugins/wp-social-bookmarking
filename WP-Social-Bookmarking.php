@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 2.8.4
+Version: 2.9
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com, MegaWN.com
 Author: A. Kilius
@@ -107,13 +107,11 @@ function wp_social_options() {
 <p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/blog-promotion/">Blog Promotion</h3></a> 
- <hr />
- <h2>Funny video online</h2>
+ <hr /> <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-video-online/">Funny video online</h3></a> 
- <hr />
- <h2>Funny photos</h2>
+ <hr /> <h2>Funny photos</h2>
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-photos/">Funny photos</h3></a> 
@@ -149,16 +147,12 @@ add_action('rss2_item', 'wp_social_rss_include');
 function wp_social_rss_include (){
 $image_size = get_option('rss_image_size_op');
 if (isset($image_size)) $image_url = wp_social_rss_image_url($image_size);
-
 else  $image_url = wp_social_rss_image_url('medium');
 
 if ($image_url != '') :
-
 $filename = $image_url;
-$ary_header = get_headers($filename, 1);   
-           
+$ary_header = get_headers($filename, 1);              
 $filesize = $ary_header['Content-Length'];
-
 echo "<enclosure url='".$image_url."' length ='".$filesize."'  type='image/jpg' />";
 endif;
 }
