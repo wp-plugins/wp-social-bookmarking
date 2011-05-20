@@ -35,7 +35,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 
 = 3.0 =
 
-Tested up to 3.1.2 WP 
+Tested up to 3.1.2 WP                                                                                          
 Updated script
 
 = 2.9 =
