@@ -34,88 +34,67 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins//">FAQ</a>.
 == Changelog ==
 
 = 3.0.1 =
-
 Updated script
 
 = 3.0.1 =
-
 Tested up to 3.1.2 WP                                                                                          
 
 = 2.9 =
-
 Tested up to 3.1 WP 
 
 = 2.8.3 =
-
 Updated   links                                                                                                                           
 
 = 2.8.2 =
-
 Updated twitter link
 
 = 2.7 =
-
  Update tags
 
 = 2.6 =
-
 Tested up to 3.04 WP 
 
 = 2.5 =
-
 Changed works upto 3.0.3 WP 
 
 = 2.4 =
-
 * Fix bugs
 
 = 2.3 =
-
 * Added: Plugin support sharing your posts feed on <a href="http://www.easyfreeads.com/"> EasyFreeAds</a>. 
 
 = 2.1 =
-
 * Update tags
 
 = 2.0 =
-
 * Fix bugs
 
 = 1.8 =
-
 * Added: WP Social Bookmarking Demo blog
 
 = 1.7 =
-
 * Updated: style.css 
  
 = 1.4 =
-
 * Added:  Support submit posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a> in new languages: English, German, Russian, French, Portuguese, Spanish  This helps to promote your blog and get more traffic. 
  
 = 1.3 =
-
 * Added: Plugin support sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>
 
 = 1.2 =
-
 * Added: style.css 
 
 = 1.1 =
-
 * Feature to change Icon Size has been added.
 
 = 1.0 =
-
 * First stable version.
 
 
 == Upgrade Notice ==
   
 = 3.0.1 =
-
-Automatically upgrade the plugin and all previous settings should remain intact.
+Automatically upgrade the plugin and all previous settings should remain intact.                       
 
 = 2.9 =
-
-Automatically upgrade the plugin and all previous settings should remain intact.
+Automatically upgrade the plugin and all previous settings should remain intact.                                                    
