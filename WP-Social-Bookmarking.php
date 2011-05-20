@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 3.0
+Version: 3.0.1
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com, MegaWN.com
 Author: A. Kilius
@@ -94,12 +94,13 @@ function wp_social_options() {
 <p><b>Plugin suport sharing your posts feed on <a href="http://www.megawn.com/">Mega World News</a>. This helps to promote your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
+	<li><a href="http://www.megawn.com/">Mega World News</a></li>
 	<li><a href="http://www.onlinerel.com/">Online Rel</a></li>
 	<li><a href="http://www.easyfreeads.com/">Easy Free Ads</a></li>
 	<li><a href="http://www.worldestatesite.com/">World Estate Site</a></li>
 	<li><a href="http://www.GreatJobCenter.com/">Great Job Center</a></li>
 	<li><a href="http://www.homeshopworld.com/">Home Shop World</a></li>
-	<li><a href="http://www.megawn.com/">Mega World News</a></li>
+
 	</ul>
 </p>
 <hr /><hr />
@@ -160,6 +161,7 @@ endif;
 function wp_social_rss_image_url($default_size = 'medium') {	
 global $post;
 	$attachments = get_children( array('post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'numberposts' => 1) );
+	                                                               
 	if($attachments == true) :
 		foreach($attachments as $id => $attachment) :
 			$img = wp_get_attachment_image_src($id, $default_size);			
@@ -167,5 +169,5 @@ global $post;
 	endif;
 	return $img[0];
 }
-                        
+                                                                                  
 ?>
