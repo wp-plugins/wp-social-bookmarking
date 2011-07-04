@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 3.0.1
+Version: 3.0.2
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
-Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, EasyFreeAds.com, MegaWN.com
+Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, OnlineRel.com, MegaWN.com
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -100,7 +100,6 @@ function wp_social_options() {
 	<li><a href="http://www.worldestatesite.com/">World Estate Site</a></li>
 	<li><a href="http://www.GreatJobCenter.com/">Great Job Center</a></li>
 	<li><a href="http://www.homeshopworld.com/">Home Shop World</a></li>
-
 	</ul>
 </p>
 <hr /><hr />
@@ -116,12 +115,10 @@ Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
 <p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
 Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-photos/">Funny photos</h3></a> 
- <hr />
-   		<h2>Joke of the Day</h2>
+ <hr />    		<h2>Joke of the Day</h2>
 <p><b>Plugin "Joke of the Day" displays categorized jokes on your blog. There are over 40,000 jokes in 40 categories. Jokes are saved on our database, so you don't need to have space for all that information. </b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/joke-of-the-day/">Joke of the Day</h3></a>
-   <hr />
- <h2>Real Estate Finder</h2>
+   <hr />  <h2>Real Estate Finder</h2>
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
 Real estate search for U.S., Canada, UK, Australia</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
@@ -139,7 +136,7 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 }
 add_action('wp_head', 'SetStyle');
 add_filter('the_content', 'WP_Social_Bookmarking', 40);
-//  ----- Image RSS
+//  -----                           Image RSS parser
 	$plugin_var= "blog-promotion";
   if (!in_array( $plugin_var.'/'.$plugin_var.'.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 add_action('rss_item', 'wp_social_rss_include');
@@ -161,7 +158,6 @@ endif;
 function wp_social_rss_image_url($default_size = 'medium') {	
 global $post;
 	$attachments = get_children( array('post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'numberposts' => 1) );
-	                                                               
 	if($attachments == true) :
 		foreach($attachments as $id => $attachment) :
 			$img = wp_get_attachment_image_src($id, $default_size);			
