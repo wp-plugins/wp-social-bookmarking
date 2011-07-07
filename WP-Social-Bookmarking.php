@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 3.0.2
+Version: 3.0.3
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
 Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, 
 Author: A. Kilius
