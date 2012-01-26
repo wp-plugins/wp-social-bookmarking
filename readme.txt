@@ -1,16 +1,16 @@
 === WP Social Bookmarking ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss, popular
+Tags: bookmarks, bookmarking, social networking, multiple, submitter, addthis, sharethis, digg, reddit, stumbleupon, facebook,google+, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.2
+Tested up to: 3.3.1
 Stable tag: trunk
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites.                                                                                  
  
 == Description ==
 
-This plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, and other.  After plugin is activated a buttons will appear after the content of the post.Clicking this  button will bring the user to the  bookmarking site.  If the user isn't logged in they will be prompted to do so.  
+This plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, and other.  After plugin is activated a buttons will appear after the content of the post.Clicking this  button will bring the user to the  bookmarking site.  If the user isn't logged in they will be prompted to do so.  
 Post your articles to the social bookmarking sites and get traffic.   
 
 == Installation ==
@@ -28,6 +28,10 @@ Post your articles to the social bookmarking sites and get traffic.
 Please see <a href="http://www.onlinerel.com/wordpress-plugins">FAQ</a>.
 
 == Changelog ==
+
+= 3.0.4 =
+Tested up to 3.3.1 WP     
+Updated script
 
 = 3.0.3 =
 Tested up to 3.1.4 WP     

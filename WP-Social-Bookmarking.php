@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 3.0.3
+Version: 3.0.4
 Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
-Description: Plugin to help people share and bookmark your posts on Facebook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, 
+Description: Plugin to help people share and bookmark your posts on Facebook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, 
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -30,10 +30,17 @@ $images = $pldir.'images/';
     $img_var =  get_option('wp_social_ico');   //"30px";
 
 	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
+if($img_var == '30px') $gplus	= '';
+if($img_var == '24px') $gplus	= '';
+if($img_var == '20px') $gplus	= 'size="medium"';
+if($img_var == '16px') $gplus	= 'size="small"';
+ 
 		$content .= '<!-- Begin WP-Social-Bookmarking -->' . "\n";
 		$content .= '<div class="WP-Social-Bookmarking"> ' . "\n"  
-	 		. '<a href="http://www.megawn.com/sfeed/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Mega World News"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Mega World News" title="Mega World News" /></a>' . "\n"
+	 		. '<a href="http://www.megawn.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Mega World News"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Mega World News" title="Mega World News" /></a>' . "\n"
 				. '<a href="http://facebook.com/sharer.php?u=' . $post_link . '&amp;t=' . $post_title . '" target="_blank" rel="nofollow" title="Facebook"><img src="' . $images . 'facebook.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Facebook" title="Facebook" /></a>' . "\n"
+                  . ' <!-- G +1 button --> <g:plusone  '.$gplus.'  annotation="none"></g:plusone>' . "\n"
+				 
 				 . '<a href="http://twitter.com/home?status=' . $post_tweet . '  ' . $post_title . '" target="_blank" rel="nofollow" title="Twitter"><img src="' . $images . 'twitter.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Twitter" title="Twitter" /></a>' . "\n"
 		         . '<a href="http://www.myspace.com/Modules/PostTo/Pages/?c=' . $post_link . '&t=' . $post_title . '" target="_blank" rel="nofollow" title="Myspace"><img src="' . $images . 'myspace.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Myspace" title="Myspace" /></a>' . "\n"				 
 			 . '<a href="http://friendfeed.com/share?url=' . $post_link . '&title=' . $post_title . '" target="_blank" rel="nofollow" title="Friendfeed"><img src="' . $images . 'friendfeed.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Friendfeed" title="Friendfeed" /></a>' . "\n"
@@ -43,8 +50,16 @@ $images = $pldir.'images/';
                   . '<a href="http://google.com/bookmarks/mark?op=add&amp;bkmk=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Google"><img src="' . $images . 'google.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Google" title="Google" /></a>' . "\n"
                   . '<a href="http://buzz.yahoo.com/submit?submitUrl=' . $post_title . '&amp;u=' . $post_link . '" target="_blank" rel="nofollow" title="Yahoo Buzz"><img src="' . $images . 'yahoobuzz.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Yahoo Buzz" title="Yahoo Buzz" /></a>' . "\n"
                   . '<a href="http://stumbleupon.com/submit?url=' . $post_link . '&amp;title=' . $post_title . '&amp;newcomment=' . $post_title . '" target="_blank" rel="nofollow" title="StumbleUpon"><img src="' . $images . 'stumbleupon.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="StumbleUpon" title="StumbleUpon" /></a>' . "\n"
-				  . '<a href="http://www.weekendjoy.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Weekend Joy"><img src="' . $images . 'weekendjoy.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Weekend Joy" title="Weekend Joy" /></a>' . "\n"
-                  . '</div><br /> <!-- End WP-Social-Bookmarking -->' . "\n\n";				  
+				  . '<a href="http://www.weekendjoy.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Weekend Joy"><img src="' . $images . 'weekendjoy.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Weekend Joy" title="Weekend Joy" /></a>' . "\n"           
+			  . '</div><br /> 
+				  <!-- G+ script --> <script type="text/javascript">
+  (function() {
+    var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
+    po.src = \'https://apis.google.com/js/plusone.js\';
+    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+ <!-- End WP-Social-Bookmarking -->' . "\n\n";				  
     }				  
 	return $content;
 }
@@ -90,40 +105,11 @@ function wp_social_options() {
 			</p>
 		</form>
 <hr />
-<p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon and other.</b></p>
+<p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Yahoo Buzz, StumbleUpon and other.</b></p>
  
 	<?php
 }
 add_action('wp_head', 'SetStyle');
 add_filter('the_content', 'WP_Social_Bookmarking', 40);
-//  -----                           Image RSS parser
-	$plugin_var= "blog-promotion";
-  if (!in_array( $plugin_var.'/'.$plugin_var.'.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-add_action('rss_item', 'wp_social_rss_include');
-add_action('rss2_item', 'wp_social_rss_include');
-  }
-function wp_social_rss_include (){
-$image_size = get_option('rss_image_size_op');
-if (isset($image_size)) $image_url = wp_social_rss_image_url($image_size);
-else  $image_url = wp_social_rss_image_url('medium');
-
-if ($image_url != '') :
-$filename = $image_url;
-$ary_header = get_headers($filename, 1);              
-$filesize = $ary_header['Content-Length'];
-echo "<enclosure url='".$image_url."' length ='".$filesize."'  type='image/jpg' />";
-endif;
-}
-
-function wp_social_rss_image_url($default_size = 'medium') {	
-global $post;
-	$attachments = get_children( array('post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'numberposts' => 1) );
-	if($attachments == true) :
-		foreach($attachments as $id => $attachment) :
-			$img = wp_get_attachment_image_src($id, $default_size);			
-		endforeach;		
-	endif;
-	return $img[0];
-}
-                                                                                  
+                                                           
 ?>
