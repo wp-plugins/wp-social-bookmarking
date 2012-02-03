@@ -23,10 +23,6 @@ Post your articles to the social bookmarking sites and get traffic.
 
 1. WP Social Bookmarking buttons in the post footer
 
-== Frequently Asked Questions ==
-
-Please see <a href="http://www.onlinerel.com/wordpress-plugins">FAQ</a>.
-
 == Changelog ==
 
 = 3.0.4 =
