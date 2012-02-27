@@ -1,20 +1,22 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Version: 3.0.4
-Plugin URI: http://wordpress.org/extend/plugins/wp-social-bookmarking/
-Description: Plugin to help people share and bookmark your posts on Facebook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, 
+Plugin URI: http://www.onlinerel.com/wordpress-plugins/
+Description: Plugin to help people share and bookmark your posts on Facebook, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.
+Version: 3.1
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
+ 
 register_activation_hook( __FILE__, 'wp_social_activate' );
 add_action('admin_menu', 'wp_social_menu');
 
+function wp_social_menu() {
+ add_menu_page('WP Social Bookmarking', 'Social Bookmarking', 8, __FILE__, 'wp_social_options');
+}
+
 function wp_social_activate() {
 	update_option('wp_social_ico', '24px');	
-}
-function wp_social_menu() {
-	add_options_page('WP Social Bookmarking', 'Social Bookmarking', 8, __FILE__, 'wp_social_options');
 }
 
 function WP_Social_Bookmarking($content) {
@@ -24,9 +26,9 @@ $images = $pldir.'images/';
 	$post_link = get_permalink($post->ID);	
 	$post_link = get_permalink($post->ID);	
     $lang = get_bloginfo('language'); 
-	$post_l =  base64_encode( $post_link );
-	$post_tweet = site_url().'/?p='.$post->ID;
+	$post_l =  base64_encode( $post_link );	
     $post_title = get_the_title($post->ID);
+	$post_tweet = site_url().'/?p='.$post->ID;
     $img_var =  get_option('wp_social_ico');   //"30px";
 
 	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
@@ -39,8 +41,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
 		$content .= '<div class="WP-Social-Bookmarking"> ' . "\n"  
 	 		. '<a href="http://www.megawn.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Mega World News"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Mega World News" title="Mega World News" /></a>' . "\n"
 				. '<a href="http://facebook.com/sharer.php?u=' . $post_link . '&amp;t=' . $post_title . '" target="_blank" rel="nofollow" title="Facebook"><img src="' . $images . 'facebook.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Facebook" title="Facebook" /></a>' . "\n"
-                  . ' <!-- G +1 button --> <g:plusone  '.$gplus.'  annotation="none"></g:plusone>' . "\n"
-				 
+                  . ' <!-- G +1 button --> <g:plusone  '.$gplus.'  annotation="none"></g:plusone>' . "\n"				 
 				 . '<a href="http://twitter.com/home?status=' . $post_tweet . '  ' . $post_title . '" target="_blank" rel="nofollow" title="Twitter"><img src="' . $images . 'twitter.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Twitter" title="Twitter" /></a>' . "\n"
 		         . '<a href="http://www.myspace.com/Modules/PostTo/Pages/?c=' . $post_link . '&t=' . $post_title . '" target="_blank" rel="nofollow" title="Myspace"><img src="' . $images . 'myspace.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Myspace" title="Myspace" /></a>' . "\n"				 
 			 . '<a href="http://friendfeed.com/share?url=' . $post_link . '&title=' . $post_title . '" target="_blank" rel="nofollow" title="Friendfeed"><img src="' . $images . 'friendfeed.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Friendfeed" title="Friendfeed" /></a>' . "\n"
@@ -94,8 +95,7 @@ function wp_social_options() {
 	 <th scope="row"> Change Icon Size </th>
 					<td>
 						<select name="wp_social_ico">
-							<option value="30px" <?php echo get_option('wp_social_ico') == '30px'?'selected':'';?>>30x30px (Big)</option>
-							<option value="24px" <?php echo get_option('wp_social_ico') == '24px'?'selected':'';?>>24x24px</option>
+							<option value="24px" <?php echo get_option('wp_social_ico') == '24px'?'selected':'';?>>24x24px (Big)</option>
 							<option value="20px" <?php echo get_option('wp_social_ico') == '20px'?'selected':'';?>>20x20px</option>
 							<option value="16px" <?php echo get_option('wp_social_ico') == '16px'?'selected':'';?>>16x16px (Small)</option>
 						</select>
@@ -105,11 +105,11 @@ function wp_social_options() {
 			</p>
 		</form>
 <hr />
-<p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Yahoo Buzz, StumbleUpon and other.</b></p>
+<p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Yahoo Buzz, StumbleUpon and other. <br /> <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank">See Other Plugins</a></b></p>
  
 	<?php
 }
 add_action('wp_head', 'SetStyle');
-add_filter('the_content', 'WP_Social_Bookmarking', 40);
+add_filter('the_content', 'WP_Social_Bookmarking', 30);
                                                            
 ?>
