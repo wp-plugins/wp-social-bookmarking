@@ -3,7 +3,7 @@
 Plugin Name: WP Social Bookmarking
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin to help people share and bookmark your posts on Facebook, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.
-Version: 3.1
+Version: 3.2
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -51,7 +51,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
                   . '<a href="http://google.com/bookmarks/mark?op=add&amp;bkmk=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Google"><img src="' . $images . 'google.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Google" title="Google" /></a>' . "\n"
                   . '<a href="http://buzz.yahoo.com/submit?submitUrl=' . $post_title . '&amp;u=' . $post_link . '" target="_blank" rel="nofollow" title="Yahoo Buzz"><img src="' . $images . 'yahoobuzz.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Yahoo Buzz" title="Yahoo Buzz" /></a>' . "\n"
                   . '<a href="http://stumbleupon.com/submit?url=' . $post_link . '&amp;title=' . $post_title . '&amp;newcomment=' . $post_title . '" target="_blank" rel="nofollow" title="StumbleUpon"><img src="' . $images . 'stumbleupon.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="StumbleUpon" title="StumbleUpon" /></a>' . "\n"
-				  . '<a href="http://www.weekendjoy.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Weekend Joy"><img src="' . $images . 'weekendjoy.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Weekend Joy" title="Weekend Joy" /></a>' . "\n"           
+				  . '<a href="http://www.elipets.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Eli Pets"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Eli Pets" title="Eli Pets" /></a>' . "\n"           
 			  . '</div><br /> 
 				  <!-- G+ script --> <script type="text/javascript">
   (function() {
@@ -105,7 +105,9 @@ function wp_social_options() {
 			</p>
 		</form>
 <hr />
-<p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Yahoo Buzz, StumbleUpon and other. <br /> <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank">See Other Plugins</a></b></p>
+<p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Yahoo Buzz, StumbleUpon and other.
+<br /> 
+<a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank">See Other Plugins</a></b></p>
  
 	<?php
 }
