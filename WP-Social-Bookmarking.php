@@ -3,7 +3,7 @@
 Plugin Name: WP Social Bookmarking
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin to help people share and bookmark your posts on Facebook, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.
-Version: 3.2
+Version: 3.3
 Author: A. Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
@@ -31,7 +31,7 @@ $images = $pldir.'images/';
 	$post_tweet = site_url().'/?p='.$post->ID;
     $img_var =  get_option('wp_social_ico');   //"30px";
 
-	if ( is_single() && !is_home() && !is_front_page() && !is_page() && !is_front_page() && !is_archive()) {
+	if ( is_single()) {
 if($img_var == '30px') $gplus	= '';
 if($img_var == '24px') $gplus	= '';
 if($img_var == '20px') $gplus	= 'size="medium"';
@@ -39,7 +39,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
  
 		$content .= '<!-- Begin WP-Social-Bookmarking -->' . "\n";
 		$content .= '<div class="WP-Social-Bookmarking"> ' . "\n"  
-	 		. '<a href="http://www.megawn.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Mega World News"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Mega World News" title="Mega World News" /></a>' . "\n"
+	 		. '<a href="http://www.articleglobal.com//?f='.$post_l.'&l='.$lang.'" target="_blank" title="Article Global"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Article Global" title="Article Global" /></a>' . "\n"
 				. '<a href="http://facebook.com/sharer.php?u=' . $post_link . '&amp;t=' . $post_title . '" target="_blank" rel="nofollow" title="Facebook"><img src="' . $images . 'facebook.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Facebook" title="Facebook" /></a>' . "\n"
                   . ' <!-- G +1 button --> <g:plusone  '.$gplus.'  annotation="none"></g:plusone>' . "\n"				 
 				 . '<a href="http://twitter.com/home?status=' . $post_tweet . '  ' . $post_title . '" target="_blank" rel="nofollow" title="Twitter"><img src="' . $images . 'twitter.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Twitter" title="Twitter" /></a>' . "\n"

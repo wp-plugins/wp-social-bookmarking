@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: bookmarks, bookmarking, social networking, multiple, submitter, digg, reddit, stumbleupon, facebook, google+, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss
 Requires at least: 2.5
-Tested up to: 3.4.1
+Tested up to: 3.4.2
 Stable tag: trunk
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites.    
@@ -24,6 +24,10 @@ Post your articles to the social bookmarking sites and get traffic.
 1. WP Social Bookmarking buttons in the post footer
 
 == Changelog ==
+
+= 3.3 =
+Tested up to 3.4.2 WP     
+Updated script
 
 = 3.2 =
 Tested up to 3.4.1 WP     
@@ -97,6 +101,3 @@ Automatically upgrade the plugin and all previous settings should remain intact.
   
 = 3.0.1 =
 Automatically upgrade the plugin and all previous settings should remain intact.                       
-
-= 2.9 =
-Automatically upgrade the plugin and all previous settings should remain intact.                                                    
