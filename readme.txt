@@ -1,16 +1,16 @@
 === WP Social Bookmarking ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: bookmarks, bookmarking, social networking, multiple, submitter, digg, reddit, stumbleupon, facebook, google+, twitter,  post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss
+Tags:  facebook, pinterest, google+, twitter, bookmarks, bookmarking, social networking, multiple, submitter, digg, reddit, stumbleupon, post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss
 Requires at least: 2.5
-Tested up to: 3.4.2
+Tested up to: 3.5.1
 Stable tag: trunk
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites.    
  
 == Description ==
 
-This plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon, and other.  After plugin is activated a buttons will appear after the content of the post.Clicking this  button will bring the user to the  bookmarking site.  If the user isn't logged in they will be prompted to do so.  
+This plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Pinterest, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, StumbleUpon, and other.  After plugin is activated a buttons will appear after the content of the post.Clicking this  button will bring the user to the  bookmarking site.  If the user isn't logged in they will be prompted to do so.  
 Post your articles to the social bookmarking sites and get traffic.   
 
 == Installation ==
@@ -24,6 +24,11 @@ Post your articles to the social bookmarking sites and get traffic.
 1. WP Social Bookmarking buttons in the post footer
 
 == Changelog ==
+
+= 3.4 =
+Tested up to 3.5.1 WP     
+Added Pinterest button
+Deleted Yahoo Buzz button
 
 = 3.3 =
 Tested up to 3.4.2 WP     
