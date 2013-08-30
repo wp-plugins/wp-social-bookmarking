@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: WP Social Bookmarking
-Plugin URI: http://www.onlinerel.com/wordpress-plugins/
+Plugin URI: http://www.premiumresponsive.com/wordpress-plugins/
 Description: Plugin to help people share and bookmark your posts on Facebook, Pinterest, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google,  StumbleUpon.
-Version: 3.4
+Version: 3.5
 Author: A. Kilius
-Author URI: http://www.onlinerel.com/wordpress-plugins/
+Author URI: http://www.premiumresponsive.com/wordpress-plugins/
 */
  
 register_activation_hook( __FILE__, 'wp_social_activate' );
@@ -51,7 +51,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
  . '<a href="http://digg.com/submit?phase=2&amp;url=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Digg"><img src="' . $images . 'digg.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Digg" title="Digg" /></a>' . "\n"         
  . '<a href="http://google.com/bookmarks/mark?op=add&amp;bkmk=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Google"><img src="' . $images . 'google.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Google" title="Google" /></a>' . "\n"
  . '<a href="http://stumbleupon.com/submit?url=' . $post_link . '&amp;title=' . $post_title . '&amp;newcomment=' . $post_title . '" target="_blank" rel="nofollow" title="StumbleUpon"><img src="' . $images . 'stumbleupon.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="StumbleUpon" title="StumbleUpon" /></a>' . "\n"
-. '<a href="http://www.elipets.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Eli Pets"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Eli Pets" title="Eli Pets" /></a>' . "\n"           
+. '<a href="http://www.premiumresponsive.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Eli Pets"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Eli Pets" title="Eli Pets" /></a>' . "\n"           
 . '</div><br /> 
 <!-- G+ script --> <script type="text/javascript">
   (function() {
@@ -107,7 +107,7 @@ function wp_social_options() {
 <hr />
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook,Pinterest, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg,  StumbleUpon and other.
 <br /> 
-<a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank">See Other Plugins</a></b></p>
+<a href="http://www.premiumresponsive.com/wordpress-plugins/" target="_blank">See Other Plugins</a></b></p>
  
 	<?php
 }
