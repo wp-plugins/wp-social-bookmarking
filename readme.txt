@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.premiumresponsive.com/wordpress-plugins/
 Tags:  facebook, pinterest, google+, twitter, bookmarks, bookmarking, social networking, multiple, submitter, digg, reddit, stumbleupon, post, posts, link, links, page, pages, promote, SEO, google, yahoo,facebook share, sidebar, feed, rss
 Requires at least: 2.5
-Tested up to: 3.6
+Tested up to: 4.1.1
 Stable tag: trunk
 
 WP Social Bookmarking plugin syndicates your blog posts in social networking sites.    
@@ -25,7 +25,11 @@ Post your articles to the social bookmarking sites and get traffic.
 
 == Changelog ==
 
-= 3.4 =
+= 3.6 =
+Tested up to 4.1.1 WP     
+Updated script
+
+= 3.5 =
 Tested up to 3.6 WP     
 Updated script
 

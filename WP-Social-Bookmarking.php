@@ -3,7 +3,7 @@
 Plugin Name: WP Social Bookmarking
 Plugin URI: http://www.premiumresponsive.com/wordpress-plugins/
 Description: Plugin to help people share and bookmark your posts on Facebook, Pinterest, Google+, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google,  StumbleUpon.
-Version: 3.5
+Version: 3.6
 Author: A. Kilius
 Author URI: http://www.premiumresponsive.com/wordpress-plugins/
 */
@@ -39,7 +39,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
  
 		$content .= '<!-- Begin WP-Social-Bookmarking -->' . "\n";
 		$content .= '<div class="WP-Social-Bookmarking"> ' . "\n"  
-. '<a href="http://www.websitepin.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Article Global"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Article Global" title="Article Global" /></a>' . "\n"
+. '<a href="http://www.websitepin.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Website Pin"><img src="' . $images . 'onlinerel.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Website Pin" title="Website Pin" /></a>' . "\n"
 . '<a href="http://facebook.com/sharer.php?u=' . $post_link . '&amp;t=' . $post_title . '" target="_blank" rel="nofollow" title="Facebook"><img src="' . $images . 'facebook.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Facebook" title="Facebook" /></a>' . "\n"
  . '<a data-pin-config="none" href="//pinterest.com/pin/create/button/?url='.$urlp.'&media='.$image.'&description='.$post_title.'" data-pin-do="buttonPin" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a><script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>' . "\n"	
  . ' <!-- G +1 button --> <g:plusone  '.$gplus.'  annotation="none"></g:plusone>' . "\n"				 
@@ -51,7 +51,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
  . '<a href="http://digg.com/submit?phase=2&amp;url=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Digg"><img src="' . $images . 'digg.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Digg" title="Digg" /></a>' . "\n"         
  . '<a href="http://google.com/bookmarks/mark?op=add&amp;bkmk=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Google"><img src="' . $images . 'google.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Google" title="Google" /></a>' . "\n"
  . '<a href="http://stumbleupon.com/submit?url=' . $post_link . '&amp;title=' . $post_title . '&amp;newcomment=' . $post_title . '" target="_blank" rel="nofollow" title="StumbleUpon"><img src="' . $images . 'stumbleupon.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="StumbleUpon" title="StumbleUpon" /></a>' . "\n"
-. '<a href="http://www.premiumresponsive.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Eli Pets"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Eli Pets" title="Eli Pets" /></a>' . "\n"           
+. '<a href="http://www.premiumresponsive.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Premium Responsive"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Premium Responsive" title="Premium Responsive" /></a>' . "\n"           
 . '</div><br /> 
 <!-- G+ script --> <script type="text/javascript">
   (function() {
