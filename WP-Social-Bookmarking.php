@@ -51,7 +51,7 @@ if($img_var == '16px') $gplus	= 'size="small"';
  . '<a href="http://digg.com/submit?phase=2&amp;url=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Digg"><img src="' . $images . 'digg.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Digg" title="Digg" /></a>' . "\n"         
  . '<a href="http://google.com/bookmarks/mark?op=add&amp;bkmk=' . $post_link . '&amp;title=' . $post_title . '" target="_blank" rel="nofollow" title="Google"><img src="' . $images . 'google.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Google" title="Google" /></a>' . "\n"
  . '<a href="http://stumbleupon.com/submit?url=' . $post_link . '&amp;title=' . $post_title . '&amp;newcomment=' . $post_title . '" target="_blank" rel="nofollow" title="StumbleUpon"><img src="' . $images . 'stumbleupon.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="StumbleUpon" title="StumbleUpon" /></a>' . "\n"
-. '<a href="http://www.premiumresponsive.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Premium Responsive"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Premium Responsive" title="Premium Responsive" /></a>' . "\n"           
+. '<a href="http://wordpress-themes.premiumresponsive.com/?f='.$post_l.'&l='.$lang.'" target="_blank" title="Premium Responsive"><img src="' . $images . 'elipets.png" style="width:' . $img_var . ';height:' . $img_var . ';border:0px;" alt="Premium Responsive" title="Premium Responsive" /></a>' . "\n"           
 . '</div><br /> 
 <!-- G+ script --> <script type="text/javascript">
   (function() {
